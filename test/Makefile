@@ -5,7 +5,7 @@
 SIM ?= icarus
 TOPLEVEL_LANG ?= verilog
 SRC_DIR = $(PWD)/../src
-PROJECT_SOURCES = project.v
+PROJECT_SOURCES = tt_um_Scimia_oscillator_tester.v oscillator_tester.v counter_1k_cycles.v counter_8bit.v FSM.v PIPO_8bit.v Synchronizer.v Timer.v
 
 ifneq ($(GATES),yes)
 

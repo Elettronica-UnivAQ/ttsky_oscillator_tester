@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This simple design aims to receive an input clock signal (any square wave) and measures its frequency
 
 ## How to test
 
-Explain how to use your project
+simply connect an external oscillator or square wave generator to the input pin ui_in[0] at least 10 times slower than the system clock and the 8bit result (expressed in kHz) to the uo_out pins
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Just an external wave generator or oscilator and a logic analyzer to check the results

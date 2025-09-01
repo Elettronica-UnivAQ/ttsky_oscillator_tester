@@ -17,9 +17,9 @@ module tb ();
   reg clk;
   reg rst_n;
   reg ena;
-  reg [7:0] ui_in;
+  reg sig_in;
   reg [7:0] uio_in;
-  wire [7:0] uo_out;
+  wire [7:0] measure;
   wire [7:0] uio_out;
   wire [7:0] uio_oe;
 `ifdef GL_TEST
@@ -28,7 +28,7 @@ module tb ();
 `endif
 
   // Replace tt_um_example with your module name:
-  tt_um_example user_project (
+  tt_um_Scimia_oscillator_tester tt_um_Scimia_oscillator_tester (
 
       // Include power ports for the Gate Level test:
 `ifdef GL_TEST
@@ -36,8 +36,8 @@ module tb ();
       .VGND(VGND),
 `endif
 
-      .ui_in  (ui_in),    // Dedicated inputs
-      .uo_out (uo_out),   // Dedicated outputs
+      .ui_in  ({7'b0, sig_in}),    // Dedicated inputs
+      .uo_out (measure),   // Dedicated outputs
       .uio_in (uio_in),   // IOs: Input path
       .uio_out(uio_out),  // IOs: Output path
       .uio_oe (uio_oe),   // IOs: Enable path (active high: 0=input, 1=output)
