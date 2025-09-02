@@ -17,7 +17,7 @@ module tb ();
   reg clk;
   reg rst_n;
   reg ena;
-  reg sig_in;
+  reg osc;
   reg [7:0] uio_in;
   wire [7:0] measure;
   wire [7:0] uio_out;
@@ -36,7 +36,7 @@ module tb ();
       .VGND(VGND),
 `endif
 
-      .ui_in  ({7'b0, sig_in}),    // Dedicated inputs
+      .ui_in  ({7'b0, osc}),    // Dedicated inputs
       .uo_out (measure),   // Dedicated outputs
       .uio_in (uio_in),   // IOs: Input path
       .uio_out(uio_out),  // IOs: Output path
