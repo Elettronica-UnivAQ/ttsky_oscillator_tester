@@ -72,6 +72,7 @@ counter_8bit counter_8bit_inst (
 
 PIPO_8bit out_reg_inst (
     .clk(reg_out),
+    .rst(reset),
     .data_in(reg_in),
     .data_out(measure)
 );

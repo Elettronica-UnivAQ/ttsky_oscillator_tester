@@ -50,7 +50,7 @@ async def test_project(dut):
     cocotb.start_soon(monitor())
 
     # Durata simulazione (equivalente a #2000000000)
-    sim_time = 2_000_000  # ns
+    sim_time = 1_200_000_000  # ns
     await Timer(sim_time, units="ns")
 
     dut._log.info("Simulation finished")
